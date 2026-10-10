@@ -9,7 +9,7 @@ projects and numbers inside the app are fictional demo data.
 
 ## Run it
 
-Needs Node.js 22.13 or newer (uses the built-in SQLite driver).....
+Needs Node.js 22.13 or newer (uses the built-in SQLite driver).
 
 ```bash
 npm install
