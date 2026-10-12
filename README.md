@@ -54,29 +54,4 @@ Put the laptop and phone on the same network (a phone hotspot works). The QR cod
 the laptop's network address automatically. If it does not open, Windows Firewall is blocking
 Node on port 3000: allow it when Windows asks, or show the verify page on the laptop.
 
-## Where things are
 
-| File | What it does |
-|---|---|
-| `src/lib/matching.ts` | Match score and trust score. Pure functions. No AI. Cannot read CGPA (the field is not in its input type). |
-| `src/lib/actions.ts` | Every state change, with the platform rules enforced on the server. |
-| `src/lib/db.ts` | SQLite storage, hash-chained audit ledger, certificate signing (HMAC-SHA256). |
-| `src/lib/ai.ts` | Claude API calls (structured output) and the fallback logic. |
-| `src/lib/template.ts` | Rule-based internship drafter and explanation used when AI is offline. |
-| `src/lib/seed.ts` | The fictional demo data. |
-| `src/components/Hero3D.tsx` | The scroll-driven Three.js landing scene. |
-| `src/app/(app)/` | Student, startup, mentor and placement-cell screens. |
-| `src/app/verify/[id]/` | Public certificate verification page. |
-
-## What is real and what is simplified
-
-Real: all four roles, the database, scoring, server-side rules, college-email check at sign-up,
-certificate signing and public verification, the audit ledger, CSV export.
-
-Simplified: login is a role switcher (no passwords, no verification email), all data is fictional,
-the internship weeks are compressed for the demo, and it runs on one machine.
-
-## Design credit
-
-The landing page's scroll-driven camera idea is inspired by MengTo's "Kage" project. No code or
-artwork from it is used (it has no reuse license); the scene here is written from scratch.
